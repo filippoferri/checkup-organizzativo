@@ -13,11 +13,11 @@
 }
 
 @theme.extend.colors {
-  bluScuro: '#16697A',
-  bluMedio: '#489FB5',
-  bluChiaro: '#82C0CC',
-  grigioChiaro: '#EDE7E3',
-  arancione: '#FFA62B',
+  bluScuro: '#16697A';
+  bluMedio: '#489FB5';
+  bluChiaro: '#82C0CC';
+  grigioChiaro: '#EDE7E3';
+  arancione: '#FFA62B';
 }
 
 @media (prefers-color-scheme: dark) {
