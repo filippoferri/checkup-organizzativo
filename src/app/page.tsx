@@ -7,8 +7,8 @@ import Preliminari, { PreliminariData } from "@/components/Preliminari";
 
 export default function Home() {
   const [step, setStep] = useState(0);
-  const [user, setUser] = useState<UserData | null>(null);
-  const [preliminari, setPreliminari] = useState<PreliminariData | null>(null);
+  const [_user, setUser] = useState<UserData | null>(null);
+  const [_preliminari, setPreliminari] = useState<PreliminariData | null>(null);
 
   return (
     <main className="min-h-screen bg-[#EDE7E3] flex flex-col items-center justify-center">

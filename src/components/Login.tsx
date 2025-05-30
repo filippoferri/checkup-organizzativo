@@ -28,7 +28,7 @@ export default function Login({ onNext }: LoginProps) {
       className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 flex flex-col gap-6 border-t-8 border-[#489FB5]"
     >
       <h1 className="text-3xl font-bold text-[#16697A] text-center">Checkup Organizzativo</h1>
-      <p className="text-[#489FB5] text-center">L'autovalutazione gratuita per le PMI italiane</p>
+      <p className="text-[#489FB5] text-center">L&apos;autovalutazione gratuita per le PMI italiane</p>
       <input
         type="email"
         value={email}
