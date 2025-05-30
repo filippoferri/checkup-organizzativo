@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import { UserData } from "@/components/login";
-import { PreliminariData } from "@/components/preliminari";
+import Login, { UserData } from "@/components/Login";
+import Preliminari, { PreliminariData } from "@/components/Preliminari";
 // import Quiz from "@/components/Quiz";
 // import Results from "@/components/Results";
 
