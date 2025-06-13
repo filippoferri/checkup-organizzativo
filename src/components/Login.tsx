@@ -1,9 +1,10 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 export interface UserData {
   email: string;
-  nome?: string;
+  name: string;
 }
 
 interface LoginProps {
@@ -12,29 +13,40 @@ interface LoginProps {
 
 export default function Login({ onNext }: LoginProps) {
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [consent, setConsent] = useState(false);
 
   // Chiamato quando premi Avanti (submit form)
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (email && consent) {
-      onNext({ email }); // Passa i dati allo step successivo!
+    if (name && email && consent) {
+      onNext({ email, name }); // Passa i dati allo step successivo!
     }
   };
 
   return (
+    <section className="w-full bg-white p-8 flex flex-col gap-6 rounded-2xl">
     <form
       onSubmit={handleSubmit}
-      className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 flex flex-col gap-6 border-t-8 border-[#489FB5]"
+      className="w-full bg-white p-8 flex flex-col gap-6"
     >
-      <h1 className="text-3xl font-bold text-[#16697A] text-center">Checkup Organizzativo</h1>
-      <p className="text-[#489FB5] text-center">L&apos;autovalutazione gratuita per le PMI italiane</p>
+      <Image src="/logo-dark.svg" alt="Checkup Organizzativo™" className="h-16 w-auto" width={200} height={64} />
+      <h2 className="text-xl text-sky-900 text-center">L&apos;autovalutazione gratuita per le PMI italiane.</h2>
+      <p className="text-center">Dove dobbiamo inviare i risultati del Checkup?</p>
+      <input
+        type="text"
+        value={name}
+        onChange={e => setName(e.target.value)}
+        placeholder="Il tuo nome"
+        className="border border-sky-900 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-200"
+        required
+      />
       <input
         type="email"
         value={email}
         onChange={e => setEmail(e.target.value)}
-        placeholder="La tua email"
-        className="border border-[#16697A] rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFA62B]"
+        placeholder="La tua email di lavoro"
+        className="border border-sky-900 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-200"
         required
       />
       <label className="flex items-center gap-2">
@@ -43,15 +55,16 @@ export default function Login({ onNext }: LoginProps) {
           checked={consent}
           onChange={e => setConsent(e.target.checked)}
         />
-        <span className="text-xs text-[#489FB5]">Acconsento al trattamento dei dati personali</span>
+        <span className="text-s text-sky-900">Acconsento al trattamento dei dati personali</span>
       </label>
       <button
         type="submit"
         disabled={!email || !consent}
-        className="bg-[#FFA62B] text-[#16697A] font-bold px-6 py-3 rounded-xl disabled:opacity-40 transition"
+        className="bg-teal-200 text-black font-bold px-6 py-3 rounded-xl disabled:opacity-40 transition cursor-pointer"
       >
         Avanti
       </button>
     </form>
+    </section>
   );
 }

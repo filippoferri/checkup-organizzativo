@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1134 316" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-4442,-5923)">
+        <g id="Artboard3" transform="matrix(0.684217,0,0,1,1402.55,-0.411085)">
+            <rect x="4442.23" y="5923.41" width="1656.95" height="315.109" style="fill:none;"/>
+            <g transform="matrix(1.46153,0,0,1,-3299.13,539.975)">
+                <text x="5645.83px" y="5538.06px" style="font-family:'EuphemiaUCAS-Bold', 'Euphemia UCAS', sans-serif;font-weight:700;font-size:96px;fill:white;">Checkup</text>
+                <g transform="matrix(96,0,0,96,6305.32,5634.06)">
+                </g>
+                <text x="5645.83px" y="5634.06px" style="font-family:'EuphemiaUCAS-Bold', 'Euphemia UCAS', sans-serif;font-weight:700;font-size:96px;fill:white;">Organizzativo</text>
+            </g>
+            <g transform="matrix(3.13223,0,0,2.14312,-9662.86,-6868.25)">
+                <g transform="matrix(1,0,0,1,4193.99,5379.93)">
+                    <path d="M395.892,641.923C398.203,639.605 399.632,636.409 399.632,632.878C399.632,625.805 393.898,620.07 386.825,620.07C382.353,620.07 378.421,622.365 376.131,625.838C375.522,626.448 324.537,689.288 324.061,690.01C321.75,692.327 320.32,695.523 320.32,699.055C320.32,706.128 326.054,711.862 333.128,711.862C337.6,711.862 341.531,709.567 343.822,706.095C344.43,705.484 395.416,642.645 395.892,641.923Z" style="fill:rgb(71,236,213);fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(1,0,0,1,4193.99,5379.93)">
+                    <path d="M425.394,671.739C427.71,669.422 429.144,666.221 429.144,662.685C429.144,655.611 423.41,649.877 416.336,649.877C411.862,649.877 407.929,652.174 405.639,655.65C405.025,656.264 378.247,689.272 377.767,690C375.45,692.317 374.017,695.519 374.017,699.055C374.017,706.128 379.751,711.862 386.825,711.862C391.299,711.862 395.231,709.565 397.522,706.09C398.135,705.476 424.914,672.467 425.394,671.739Z" style="fill:rgb(71,236,213);fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(1,0,0,1,4193.99,5379.93)">
+                    <path d="M453.33,632.878C453.33,639.951 447.595,645.686 440.521,645.686C433.448,645.686 427.714,639.951 427.714,632.878C427.714,625.805 433.448,620.07 440.521,620.07C447.595,620.07 453.33,625.805 453.33,632.878Z" style="fill:rgb(71,236,213);fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(1,0,0,1,4193.99,5379.93)">
+                    <path d="M345.936,632.878C345.936,639.951 340.201,645.686 333.128,645.686C326.054,645.686 320.32,639.951 320.32,632.878C320.32,625.805 326.054,620.07 333.128,620.07C340.201,620.07 345.936,625.805 345.936,632.878Z" style="fill:rgb(71,236,213);fill-rule:nonzero;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
