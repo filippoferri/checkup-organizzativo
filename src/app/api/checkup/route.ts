@@ -68,8 +68,8 @@ export async function POST(req: NextRequest) {
         const resend = new Resend(process.env.RESEND_API_KEY);
         
         // Temporarily use delivered@resend.dev for all environments until domain issues are resolved
-        // const toEmail = process.env.NODE_ENV === 'production' ? email : 'delivered@resend.dev';
-        const toEmail = 'delivered@resend.dev';
+        const toEmail = process.env.NODE_ENV === 'production' ? email : 'delivered@resend.dev';
+        // const toEmail = 'delivered@resend.dev';
         
         console.log('Sending email to:', toEmail);
         console.log('Environment:', process.env.NODE_ENV);
