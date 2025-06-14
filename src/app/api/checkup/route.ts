@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { neon } from '@neondatabase/serverless';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 // Initialize the sql query function with the database URL
 const sql = neon(process.env.DATABASE_URL!);
 
@@ -60,6 +58,15 @@ export async function POST(req: NextRequest) {
 
     // Send email with results
     try {
+        // Check if Resend API key is available
+        if (!process.env.RESEND_API_KEY) {
+            console.error('RESEND_API_KEY environment variable is not set');
+            return NextResponse.json({ ok: true, message: 'Data saved but email service not configured' });
+        }
+
+        // Initialize Resend client
+        const resend = new Resend(process.env.RESEND_API_KEY);
+        
         // For testing, use delivered@resend.dev
         // For production, use the actual email from the form
         const toEmail = process.env.NODE_ENV === 'production' ? email : 'delivered@resend.dev';
