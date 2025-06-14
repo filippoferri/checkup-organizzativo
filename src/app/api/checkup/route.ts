@@ -67,13 +67,16 @@ export async function POST(req: NextRequest) {
         // Initialize Resend client
         const resend = new Resend(process.env.RESEND_API_KEY);
         
-        // For testing, use delivered@resend.dev
-        // For production, use the actual email from the form
-        const toEmail = process.env.NODE_ENV === 'production' ? email : 'delivered@resend.dev';
+        // Temporarily use delivered@resend.dev for all environments until domain issues are resolved
+        // const toEmail = process.env.NODE_ENV === 'production' ? email : 'delivered@resend.dev';
+        const toEmail = 'delivered@resend.dev';
         
         console.log('Sending email to:', toEmail);
+        console.log('Environment:', process.env.NODE_ENV);
+        console.log('Resend API Key exists:', !!process.env.RESEND_API_KEY);
+        console.log('Resend API Key length:', process.env.RESEND_API_KEY?.length);
         
-        const result = await resend.emails.send({
+        const emailPayload = {
             from: 'Checkup Organizzativo <noreply@filippoferri.it>',
             to: [toEmail],
             subject: `${name}, ecco i risultati del tuo Checkup Organizzativo`,
@@ -107,7 +110,11 @@ export async function POST(req: NextRequest) {
                     <p style="color: #6b7280; font-size: 0.9em; margin-top: 30px;">Questo è un messaggio automatico. Per qualsiasi domanda, puoi rispondere a questa email.</p>
                 </div>
             `
-        });
+        };
+        
+        console.log('Email payload prepared:', JSON.stringify(emailPayload, null, 2));
+        
+        const result = await resend.emails.send(emailPayload);
         
         console.log('Email sent result:', result);
         return NextResponse.json({ ok: true, message: 'Data saved and email sent successfully' });
