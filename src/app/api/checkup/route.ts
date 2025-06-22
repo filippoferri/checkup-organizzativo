@@ -87,7 +87,7 @@ export async function POST(req: NextRequest) {
                     <p>Ciao <strong>${name}</strong>,</p>
                     <p>Grazie per aver completato il Checkup Organizzativo! Ecco i tuoi risultati:</p>
                     
-                    <div style="background-color: #ffffff; padding: 20px; border-radius: 10px; text-align: center; margin: 20px 0;">
+                    <div style="background-color: #ffd6a7; padding: 20px; border-radius: 10px; text-align: center; margin: 20px 0;">
                         <h2 style="color: #ff8905; font-size: 2.5em; margin: 0;">${risultato}%</h2>
                         <p style="color: #ff8905; font-weight: bold;">Punteggio Complessivo</p>
                     </div>
@@ -95,8 +95,8 @@ export async function POST(req: NextRequest) {
                     <h3 style="color: #004a70;">Interpretazione del risultato:</h3>
                     <p>${risultato < 50 ? 'La tua organizzazione ha ampi margini di miglioramento. Concentrati sulle aree con i punteggi più bassi.' : risultato < 66 ? 'Hai una struttura di base, ma servono miglioramenti in più aree.' : risultato < 80 ? 'Struttura buona, ma ci sono ancora opportunità di crescita.' : 'Struttura organizzativa solida! Continua a migliorare e innovare.'}</p>
                     
-                    <div style="margin: 20px 0; text-align: center;">
-                    <a href="${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3001'}/results/${insertedId}" style="background-color: #16697A; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block;">
+                    <div style="margin: 20px 0 40px 0; text-align: center;">
+                    <a href="${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3001'}/results/${insertedId}" style="background-color: #004a70; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block;">
                         Visualizza i Risultati Completi
                     </a>
                     </div>
@@ -104,7 +104,7 @@ export async function POST(req: NextRequest) {
                     <div style="background-color: #f3f4f6; padding: 15px; border-radius: 8px; margin: 20px 0;">
                         <h3 style="color: #004a70; margin-top: 0;">Vuoi migliorare i tuoi processi e performance?</h3>
                         <p style="margin-bottom: 15px;">Prenota una consulenza gratuita per scoprire come ottimizzare la tua organizzazione.</p>
-                        <a href="https://filippoferri.it/prenota-una-call/" style="background-color: #47ecd5; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block;">Prenota una Call Gratuita</a>
+                        <a href="https://filippoferri.it/prenota-una-call/" style="background-color: #47ecd5; color: black; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block;">Prenota una Call Gratuita</a>
                     </div>
                     
                     <p style="color: #6b7280; font-size: 0.9em; margin-top: 30px;">Questo è un messaggio automatico. Per qualsiasi domanda, puoi rispondere a questa email.</p>
